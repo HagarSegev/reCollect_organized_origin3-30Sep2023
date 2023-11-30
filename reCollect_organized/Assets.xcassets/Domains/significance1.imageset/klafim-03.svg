@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 311.81 476.22">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        font-family: SFPro-Regular, 'SF Pro';
+        font-size: 22.76px;
+        font-variation-settings: 'wdth' 100, 'opsz' 28, 'wght' 400;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-8 {
+        font-family: AdelleSansDevanagari-Regular, 'Adelle Sans Devanagari';
+        font-size: 148px;
+      }
+
+      .cls-9 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="311.81" height="476.22"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" width="311.81" height="476.22"/>
+    </clipPath>
+  </defs>
+  <g class="cls-3">
+    <g class="cls-7">
+      <path class="cls-5" d="m43.49,2.63h223.41c15.64,0,28.35,12.7,28.35,28.35v408.61c0,15.65-12.7,28.35-28.35,28.35H43.49c-15.64,0-28.35-12.7-28.35-28.35V30.97c0-15.64,12.7-28.35,28.35-28.35Z"/>
+      <path class="cls-2" d="m43.49,2.63h223.41c15.64,0,28.35,12.7,28.35,28.35v408.61c0,15.65-12.7,28.35-28.35,28.35H43.49c-15.64,0-28.35-12.7-28.35-28.35V30.97c0-15.64,12.7-28.35,28.35-28.35Z"/>
+    </g>
+    <text class="cls-8" transform="translate(115.87 213.14)"><tspan x="0" y="0">3</tspan></text>
+    <text class="cls-6" transform="translate(64.49 266.86)"><tspan x="0" y="0">Which pho</tspan><tspan class="cls-9" x="103.16" y="0">t</tspan><tspan x="109.77" y="0">o is </tspan></text>
+    <text class="cls-6" transform="translate(64.49 294.17)"><tspan x="0" y="0">mo</tspan><tspan class="cls-4" x="30.36" y="0">r</tspan><tspan x="36.89" y="0">e significant?</tspan></text>
+  </g>
+</svg>

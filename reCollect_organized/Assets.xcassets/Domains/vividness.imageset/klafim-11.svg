@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 311.81 476.22">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        font-family: SFPro-Regular, 'SF Pro';
+        font-size: 22.76px;
+        font-variation-settings: 'wdth' 100, 'opsz' 28, 'wght' 400;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-10 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-11 {
+        font-family: AdelleSansDevanagari-Regular, 'Adelle Sans Devanagari';
+        font-size: 148px;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="311.81" height="476.22"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" width="311.81" height="476.22"/>
+    </clipPath>
+  </defs>
+  <g class="cls-4">
+    <g class="cls-9">
+      <rect class="cls-6" x="15.85" y="2.63" width="280.1" height="465.3" rx="28.35" ry="28.35"/>
+      <rect class="cls-2" x="15.85" y="2.63" width="280.1" height="465.3" rx="28.35" ry="28.35"/>
+    </g>
+    <text class="cls-11" transform="translate(78.66 213.14)"><tspan x="0" y="0">10</tspan></text>
+    <text class="cls-7" transform="translate(74.41 267.57)"><tspan x="0" y="0">Which </tspan><tspan class="cls-3" x="66.32" y="0">ev</tspan><tspan class="cls-8" x="88.1" y="0">ent do </tspan></text>
+    <text class="cls-7" transform="translate(74.41 294.88)"><tspan class="cls-10" x="0" y="0">y</tspan><tspan x="10.63" y="0">ou </tspan><tspan class="cls-5" x="39.37" y="0">r</tspan><tspan x="45.9" y="0">emember </tspan></text>
+    <text class="cls-7" transform="translate(74.41 322.19)"><tspan x="0" y="0">mo</tspan><tspan class="cls-5" x="30.36" y="0">r</tspan><tspan x="36.89" y="0">e vividly?</tspan></text>
+  </g>
+</svg>

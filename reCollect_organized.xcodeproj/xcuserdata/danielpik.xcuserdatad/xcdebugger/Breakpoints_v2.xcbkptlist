@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "49EDB395-1631-4A36-AF37-6930BA4F9959"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EA30056-6615-4D36-9831-5395274CF10E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/ZoomTestButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "buttonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AA509B0-C6E9-4C9D-AC3E-58343A7E796A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/ZoomTestButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "buttonTapped()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08008534-9EFA-4577-94A5-C07DB97CC831"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/BackgroundEffect.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "calculateXOffset(for:initialX:curScale:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "08008534-9EFA-4577-94A5-C07DB97CC831 - f2f336ccc0e7a3dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Effect2.calculateXOffset(for: __C.CGPoint, curX: CoreGraphics.CGFloat, curScale: CoreGraphics.CGFloat) -&gt; CoreGraphics.CGFloat"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/Background/BackgroundEffect.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "08008534-9EFA-4577-94A5-C07DB97CC831 - 3186f5a3f45cf5e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Effect2.calculateXOffset(for: __C.CGPoint, initialX: CoreGraphics.CGFloat, curScale: CoreGraphics.CGFloat) -&gt; CoreGraphics.CGFloat"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/Background/BackgroundEffect.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "89">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2ACA2089-5D2A-439C-9355-105DE9F08E93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03D35A7F-2965-4EB6-A0B7-B5B9B3C20B03"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "03D35A7F-2965-4EB6-A0B7-B5B9B3C20B03 - b1f7357591c3c37c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1986">
+               </Location>
+               <Location
+                  uuid = "03D35A7F-2965-4EB6-A0B7-B5B9B3C20B03 - b1f7357591c3c37c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "1605">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "67AA4BFD-8E6D-4A2F-8980-0C4753D2F1E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B41CA024-D224-47E6-A153-CB1EEF432C39"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewHandlers/Coordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "handlerDidFinish(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A5E7788-A95D-4A73-8135-29537AED5444"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewHandlers/Coordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "handlerDidFinish(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4A5E7788-A95D-4A73-8135-29537AED5444 - 8a36a4e25eb31460"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Coordinator.handlerDidFinish(reCollect_organized.ViewControllerHandler) -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/ViewHandlers/Coordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "4A5E7788-A95D-4A73-8135-29537AED5444 - 8a36a4e25eb31460"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Coordinator.handlerDidFinish(reCollect_organized.ViewControllerHandler) -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/ViewHandlers/Coordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "295">
+               </Location>
+               <Location
+                  uuid = "4A5E7788-A95D-4A73-8135-29537AED5444 - 8a36a4e25eb31460"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Coordinator.handlerDidFinish(reCollect_organized.ViewControllerHandler) -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/ViewHandlers/Coordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  uuid = "4A5E7788-A95D-4A73-8135-29537AED5444 - 8a36a4e25eb3144f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Coordinator.handlerDidFinish(reCollect_organized.ViewControllerHandler) -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/ViewHandlers/Coordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5FA6FE1-15FF-4B65-86BE-F5CF75696F21"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3CE3FCA6-DCF0-4BA9-B5D4-D73CF52B81AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/Background.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "init(image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FB1CA6B-486E-490C-B0C6-6B458907CCA3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/TestLogicVC1.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "338225B3-2022-4178-B876-5312CC72BA47"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/TestLogicVC3.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "handlePan(gesture:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDC5A33A-C947-42FF-81E7-969CA3EDE386"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/TestLogicVC3.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "updateLines()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DECCE30-E5FF-4087-A669-9FF234FBD19D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/TestLogicVC3.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "handlePan(gesture:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8DECCE30-E5FF-4087-A669-9FF234FBD19D - fcb376849e0a57bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.TestLogicVC3.handlePan(gesture: __C.UIPanGestureRecognizer) -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/Tests/VC-Tests/TestLogicVC3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "401"
+                  endingLineNumber = "401"
+                  offsetFromSymbolStart = "326">
+               </Location>
+               <Location
+                  uuid = "8DECCE30-E5FF-4087-A669-9FF234FBD19D - fcb376849e0a57bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.TestLogicVC3.handlePan(gesture: __C.UIPanGestureRecognizer) -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/Tests/VC-Tests/TestLogicVC3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "401"
+                  endingLineNumber = "401"
+                  offsetFromSymbolStart = "409">
+               </Location>
+               <Location
+                  uuid = "8DECCE30-E5FF-4087-A669-9FF234FBD19D - fcb376849e0a57bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.TestLogicVC3.handlePan(gesture: __C.UIPanGestureRecognizer) -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/Tests/VC-Tests/TestLogicVC3.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "401"
+                  endingLineNumber = "401"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "249AA377-E98F-4C77-B225-0B74E58ABE44"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/GoogleSignVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F6D1630-9ED0-4C43-ACA5-B1FFA3E4EE8F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/GoogleSignVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15342AE7-D246-44FF-8A8E-DB1C289AF261"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/TestLogicVC2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "buttonTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "15342AE7-D246-44FF-8A8E-DB1C289AF261 - 529df0091d7898e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in reCollect_organized.TestLogicVC2.buttonTapped() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/Tests/VC-Tests/TestLogicVC2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "15342AE7-D246-44FF-8A8E-DB1C289AF261 - 529df0091d7898e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in reCollect_organized.TestLogicVC2.buttonTapped() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/Tests/VC-Tests/TestLogicVC2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89FFC36D-D734-4A9F-9959-56EFA8C489CD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "307B619F-124A-4E6B-998A-20D6F73A0F58"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/TestLogicVC1.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "executeLogic()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "041F9E2E-81C5-475B-922B-0E74A06B5FA3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/ButtonBehavior.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "buttonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0DDD181-84B1-46FE-A7E2-D18C35577C60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/ButtonBehavior.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "buttonTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E4386BB-83B4-4C56-BF93-FBA5C38F1C0C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/CustomNextButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "animateButton(shouldShow:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "921BA27F-7D66-4A4E-B39D-A2955414353C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/TestInfoVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "351"
+            endingLineNumber = "351"
+            landmarkName = "teardownView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DAD03EBA-8FEE-43E4-B2B8-ABEE6A2CFB92"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/ChooseVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(view:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80BDB93A-A25C-4B5C-A435-6D4B02BFEE87"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "setupSuperviewConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DD2E996-9979-4EF3-B0A1-426E64476C21"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "setupSuperviewConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "869456B0-9B30-428F-A6ED-AAA4CF56C735"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "setupSuperviewConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8540C151-EAEB-4C49-94C5-8F10F44A6FFB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "init(image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE2FAAD0-0CD8-4271-A5AC-EB3A027871F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "addGradientandBlur()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BBACD844-C3A3-4B4A-AA53-91CF4B53E557"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "addGradientandBlur()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "516CDEAF-62B1-4A33-8549-4ADCF75EBC3C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "layoutSubviews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6785700D-3E3C-460F-8847-47CA29C9B2D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Tests/VC-Tests/ChooseTests/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "addGradientandBlur()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1BB4BDA-8026-47CC-A83E-264CE6A8D574"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/CustomDesigns/FramedMemory/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "392"
+            endingLineNumber = "392"
+            landmarkName = "handlePanGesture(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F4AD4A8-FF63-403C-BFE0-3C2B592CD9B7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/CustomDesigns/FramedMemory/FramedMemory.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
+            landmarkName = "applyGravity()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A030E1A7-311C-4966-AB80-16FD7BF74ADE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "updateGradientOpacityAndBlurAlpha()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F36CE65A-13FA-4A60-BA30-64FD05C8CC41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F36CE65A-13FA-4A60-BA30-64FD05C8CC41 - b1f7357591c3c49c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+               <Location
+                  uuid = "F36CE65A-13FA-4A60-BA30-64FD05C8CC41 - b1f7357591c3c49c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "1232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50311742-3656-484B-831E-FC02F884922D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/LogicVC/ExplainVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "init(view:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "50311742-3656-484B-831E-FC02F884922D - 7388c39d697d9c35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ExplainVC.init(view: __C.UIView) -&gt; reCollect_organized.ExplainVC"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/ExplainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "1864">
+               </Location>
+               <Location
+                  uuid = "50311742-3656-484B-831E-FC02F884922D - 7388c39d697d9c35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ExplainVC.init(view: __C.UIView) -&gt; reCollect_organized.ExplainVC"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/ExplainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "2012">
+               </Location>
+               <Location
+                  uuid = "50311742-3656-484B-831E-FC02F884922D - 7388c39d697d9c35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ExplainVC.init(view: __C.UIView) -&gt; reCollect_organized.ExplainVC"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/ExplainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "2080">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2F92547-5404-4D3C-899D-27D19894DE3B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/reCollect_organized-bsoagxkwoxgvsfdzgjiebuzzikxc/SourcePackages/checkouts/SwiftyGif/SwiftyGif/UIImage+SwiftyGif.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "setGif(_:levelOfIntegrity:bundle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "869EC758-805F-4DB7-B9F3-4D947A3D8FAB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/LogicVC/ExplainVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "init(view:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "869EC758-805F-4DB7-B9F3-4D947A3D8FAB - 7388c39d697d9c14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ExplainVC.init(view: __C.UIView) -&gt; reCollect_organized.ExplainVC"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/ExplainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "2008">
+               </Location>
+               <Location
+                  uuid = "869EC758-805F-4DB7-B9F3-4D947A3D8FAB - 7388c39d697d9c14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ExplainVC.init(view: __C.UIView) -&gt; reCollect_organized.ExplainVC"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/ExplainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1792">
+               </Location>
+               <Location
+                  uuid = "869EC758-805F-4DB7-B9F3-4D947A3D8FAB - 7388c39d697d9c14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ExplainVC.init(view: __C.UIView) -&gt; reCollect_organized.ExplainVC"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/ExplainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "1796">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "120F4628-9348-41C8-AD9D-6DA491A44898"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/LogicVC/ExplainVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "init(view:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B83ACD09-FAB2-489C-AD63-F76E2CED8362"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "swipeRightBehavior()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B83ACD09-FAB2-489C-AD63-F76E2CED8362 - 5dfa63d666813dca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.FramedMemory.swipeRightBehavior() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "844">
+               </Location>
+               <Location
+                  uuid = "B83ACD09-FAB2-489C-AD63-F76E2CED8362 - 71c3c87a1cb9a460"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in reCollect_organized.FramedMemory.swipeRightBehavior() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "B83ACD09-FAB2-489C-AD63-F76E2CED8362 - 5dfa63d666813dca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.FramedMemory.swipeRightBehavior() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "788">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AAC40E3-6F5A-4646-B459-A34DA10FE709"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "updateImage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA4B6559-A10F-4FE6-AE82-529824C38C96"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/DataBase/DataSet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "DataSet"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "FA4B6559-A10F-4FE6-AE82-529824C38C96 - 5680b587a3c11431"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for SignificanceLevelDidChangeNotification"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/DataBase/DataSet.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "FA4B6559-A10F-4FE6-AE82-529824C38C96 - 1b5cfd97cbbdf754"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.DataSet.SignificanceLevelDidChangeNotification.unsafeMutableAddressor : __C.NSNotificationName"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/DataBase/DataSet.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B65A9850-8982-4212-890A-CEB44849F026"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/DataBase/DataSet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "addApprovedPhotoData(photoLocation:significanceValue:image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE009A61-9208-4F90-9813-C68F610FE2FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/DataBase/DataSet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "increaseSignificanceValue(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59024B35-84EC-49C7-A0DA-740AB1B1DB2E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/DataBase/DataSet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "increaseSignificanceValue(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC9060F1-BF03-448E-BA48-D65EF6C2E607"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/Background.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "addEffect(to:effect:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54E796CF-04B9-47DA-BFA4-25E08FFB524C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/LogicVC/RateVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "setupView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "54E796CF-04B9-47DA-BFA4-25E08FFB524C - bc7a95fdd8109eea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.RateVC.setupView() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/RateVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1956">
+               </Location>
+               <Location
+                  uuid = "54E796CF-04B9-47DA-BFA4-25E08FFB524C - bc7a95fdd8109e2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.RateVC.setupView() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/RateVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1980">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AA739F1B-DC74-4EE3-8932-F1301422C7B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/BackgroundEffect.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "calculateZoomScale(for:initialScale:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79E9EEB3-D69F-4A83-8445-C8CC2048AD57"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/BackgroundEffect.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "calculateZoomScale(for:initialScale:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D80F95C-C2F9-4318-A1EF-4AD5301CFFDC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/Background.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1217E8C8-1D04-493C-97F3-C783C18463FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/Background.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F920FF3-002C-4E4C-B239-22831C240EBB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/Background.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C8637AE-01B7-4D83-9395-FF91E10B16F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/Background.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE7B43A9-AE66-447B-A124-54DE63672C8E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7E5DAA2-BA98-4712-8CB4-83DA1C32DA28"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "swipeRightBehavior()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B7E5DAA2-BA98-4712-8CB4-83DA1C32DA28 - 5dfa63d666813c4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.FramedMemory.swipeRightBehavior() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "844">
+               </Location>
+               <Location
+                  uuid = "B7E5DAA2-BA98-4712-8CB4-83DA1C32DA28 - 1fb9c241cffb5af8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in reCollect_organized.FramedMemory.swipeRightBehavior() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "B7E5DAA2-BA98-4712-8CB4-83DA1C32DA28 - 5dfa63d666813c4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.FramedMemory.swipeRightBehavior() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "1136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "815450BF-2A8E-4266-81B7-6B1BAEB5F5E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/CustomDesigns/FramedMemory/FramedMemoryBehavior.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "swipeRightBehavior()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "913BF5A1-22D7-4420-B6F6-2F40DD3CF8FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/LogicVC/CompareVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
+            landmarkName = "animateQuestionLabel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "913BF5A1-22D7-4420-B6F6-2F40DD3CF8FD - 2aefa864ffb3cebe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.CompareVC.animateQuestionLabel() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/CompareVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "676">
+               </Location>
+               <Location
+                  uuid = "913BF5A1-22D7-4420-B6F6-2F40DD3CF8FD - 2aefa864ffb3cebe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.CompareVC.animateQuestionLabel() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielpik/XcodeProjects/reCollect_organized/reCollect_organized/LogicVC/CompareVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "256"
+                  endingLineNumber = "256"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

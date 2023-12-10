@@ -48,7 +48,7 @@ class CompareVC: ViewControllerHandler {
 
 
 
-    let comparisonsInDomain:Int = 1
+    let comparisonsInDomain:Int = 4
     
     init(view: UIView) {
         self.view = view
@@ -212,10 +212,10 @@ class CompareVC: ViewControllerHandler {
 
         
         if sender === button1 {
-            FirebaseManager.shared.savePhotoComparison(domain: domains[currentDomainIndex], more: randomPhotoCouples[indexComparison][0], less: randomPhotoCouples[indexComparison][1], responseTime: responseTime, totalTime: elapsedTime)
+            FirebaseManager.shared.savePhotoComparison(domain: domains[currentDomainIndex], more: randomPhotoCouples[indexComparison][0], less: randomPhotoCouples[indexComparison][1], responseTime: responseTime)
         }
         else if sender === button2 {
-            FirebaseManager.shared.savePhotoComparison(domain: domains[currentDomainIndex], more: randomPhotoCouples[indexComparison][1], less: randomPhotoCouples[indexComparison][0], responseTime: responseTime, totalTime: elapsedTime)
+            FirebaseManager.shared.savePhotoComparison(domain: domains[currentDomainIndex], more: randomPhotoCouples[indexComparison][1], less: randomPhotoCouples[indexComparison][0], responseTime: responseTime)
             
             // Print the timing for debugging
             print("Response Time: \(responseTime) seconds")

@@ -578,7 +578,7 @@ class RateVC: ViewControllerHandler {
 //            let requestOptions = PHImageRequestOptions()
 //            requestOptions.isSynchronous = true
 //            requestOptions.isNetworkAccessAllowed = true
-//            manager.requestImage(for: asset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFill, options: requestOptions) { (image, _) in
+//            manager.requestImage(for: asset, targetSize: CGSize(width: 300, height: x0), contentMode: .aspectFill, options: requestOptions) { (image, _) in
 //                if let image = image {
 //                    imageView.image = image
 //
@@ -811,7 +811,7 @@ class RateVC: ViewControllerHandler {
     
     func addNextButton(){
         // Add a button to the view
-        nextButton.setTitle("Next", for: .normal)
+        nextButton.setTitle("Done", for: .normal)
         nextButton.backgroundColor = .black
         nextButton.setTitleColor(.white, for: .normal)
         nextButton.layer.cornerRadius = 10

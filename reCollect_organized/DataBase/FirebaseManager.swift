@@ -119,7 +119,7 @@ class FirebaseManager {
         }
     }
     
-    func savePhotoComparison(domain: Domain, more: String, less: String,  responseTime: TimeInterval, totalTime: TimeInterval) {
+    func savePhotoComparison(domain: Domain, more: String, less: String,  responseTime: TimeInterval) {
             
         // Ensure the user is authenticated
         guard let userId = Auth.auth().currentUser?.uid else {

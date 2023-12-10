@@ -93,7 +93,7 @@ class StartVC: ViewControllerHandler {
             })
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
             UIView.animate(withDuration: 2.5, animations: {
                 self.byLabel.alpha = 0
                 self.logoImageView.alpha = 0

@@ -233,7 +233,7 @@ extension FramedMemory {
     func addNextButton(){
         let count = DataSet.shared.numberOfApprovedPhotos()
         print("Number of approved photos: \(count)") // Log the count for debugging
-        let enoughPhotos = count == 4
+        let enoughPhotos = count == 5
         
         if enoughPhotos {
             if ((self.behavior) != nil){

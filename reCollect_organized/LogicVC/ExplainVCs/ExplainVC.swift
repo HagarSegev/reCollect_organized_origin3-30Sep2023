@@ -44,7 +44,7 @@ class ExplainVC: ViewControllerHandler {
     
     init(view: UIView) {
         self.view = view
-        self.outerWindow = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        outerWindow = UIVisualEffectView(effect: UIBlurEffect(style: .light))
 
         self.outerWindow.alpha = 0
         self.outerWindow.layer.cornerRadius = cornerRadius

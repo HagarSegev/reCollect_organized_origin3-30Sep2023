@@ -1,11 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "klafim-09.svg",
+      "filename" : "klafim no numbering-09.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "klafim-09.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },

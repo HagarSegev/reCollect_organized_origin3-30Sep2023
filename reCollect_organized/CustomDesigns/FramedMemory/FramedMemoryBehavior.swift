@@ -108,7 +108,7 @@ extension FramedMemory {
             }) { _ in
                 self.animator.removeBehavior(self.attachment1)
                 self.gravity.gravityDirection = CGVector(dx: 0, dy: -1)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                DispatchQueue.main.asyncAfter(deadline: .now() ) {
                     self.updateImage()
                 }
             }
@@ -135,9 +135,9 @@ extension FramedMemory {
         self.objectAttached = false
         DataSet.shared.shownPhotos.append(self.localIdentifier)
         animator.removeBehavior(attachment1)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.animator.removeBehavior(self.attachment2)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() ) {
                 self.updateImage()
             }
         }

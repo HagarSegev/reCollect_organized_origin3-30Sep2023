@@ -61,7 +61,7 @@ class ChooseVC: ViewControllerHandler {
         nextButton.isUserInteractionEnabled = false
         nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant:50)
-        nextButton.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: (-10) - TopBarManager.shared.topBar.frame.height/2).isActive = true
+        nextButton.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -30 - TopBarManager.shared.topBar.frame.height / 2).isActive = true
         
 
 

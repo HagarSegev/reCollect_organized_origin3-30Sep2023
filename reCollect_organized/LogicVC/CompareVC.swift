@@ -539,8 +539,8 @@ class CompareVC: ViewControllerHandler {
         comparisonLabel.numberOfLines = 0
         comparisonLabel.lineBreakMode = .byWordWrapping
         let desiredFrame = CGRect(
-            x: screenWidth/2,
-            y: button1.frame.minY - padding*2.5,
+            x: button1.frame.minY - 10,
+            y: button1.frame.minY - padding*2.8,
             width: button2.frame.width+20, // Adjust the width
             height:   padding * 2.5
             

@@ -614,7 +614,7 @@
 				CODE_SIGN_ENTITLEMENTS = reCollect_organized/reCollect_organized.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = CLK6D35PR4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = reCollect_organized/Info.plist;
@@ -651,7 +651,7 @@
 				CODE_SIGN_ENTITLEMENTS = reCollect_organized/reCollect_organized.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = CLK6D35PR4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = reCollect_organized/Info.plist;

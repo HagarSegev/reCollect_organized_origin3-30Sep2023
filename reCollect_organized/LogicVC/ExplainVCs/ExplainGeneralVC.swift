@@ -9,15 +9,26 @@ import UIKit
 
 class ExplainGeneralVC: ExplainVC {
     
-    override func labelForStage()-> String {
-        return "Welcome to reCollect"
+    override func labelForStage() -> String { // No parameter here
+        switch state {
+        case .stage0: return ""
+        case .stage1: return "Welcome to reCollect"
+        case .stage2: return "What do we do now? "
+        case .stage3: return "Make a scientific impact! "
+        case .finished: return ""
+        }
     }
+    
+    override func shouldPerformTypingAnimation() -> Bool {
+        return false // Enable typing animation for ExplainGeneralVC
+    }
+    
     override func textForState(_ state: State) -> String {
         switch state {
         case .stage0: return ""
         case .stage1: return "reCollect is the neuroscientifc way to highlight what truly matters in your life, through your photo gallery."
-        case .stage2: return "So what do we do now? \n Follow a few simple steps and answer questions. Based on the information you provide, the application will learn how you process the significant events, places and people in your life. "
-        case .stage3: return "On this journey, you will also contribute to scientific research. Recollect is a research app developed by the Hebrew University.  all information collected is anonymized.\n \n So, are you ready? "
+        case .stage2: return " Follow a few simple steps and answer questions. Based on photos you choose and your answers, we will study how you process the significant events, places and people in your life. "
+        case .stage3: return " On this journey, you will contribute to a scientific research. Recollect is a research app developed by the Hebrew University.\nSo, are you ready? "
         case .finished: return ""
         }
     }

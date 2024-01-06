@@ -101,7 +101,7 @@
 		ECD8AD382A60037200497EB7 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		ECD8AD3A2A60329000497EB7 /* CustomInfoPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoPlaceholder.swift; sourceTree = "<group>"; };
 		ECD8AD3C2A6056E900497EB7 /* InfoPlacholdersExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPlacholdersExtensions.swift; sourceTree = "<group>"; };
-		ECDA13A52A41A4A400FC5B31 /* reCollect_organized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reCollect_organized.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECDA13A52A41A4A400FC5B31 /* reCollect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reCollect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDA13A82A41A4A400FC5B31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECDA13AA2A41A4A400FC5B31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ECDA13AC2A41A4A400FC5B31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 		ECDA13A62A41A4A400FC5B31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECDA13A52A41A4A400FC5B31 /* reCollect_organized.app */,
+				ECDA13A52A41A4A400FC5B31 /* reCollect.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,9 +335,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ECDA13A42A41A4A400FC5B31 /* reCollect_organized */ = {
+		ECDA13A42A41A4A400FC5B31 /* reCollect */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ECDA13B92A41A4AC00FC5B31 /* Build configuration list for PBXNativeTarget "reCollect_organized" */;
+			buildConfigurationList = ECDA13B92A41A4AC00FC5B31 /* Build configuration list for PBXNativeTarget "reCollect" */;
 			buildPhases = (
 				ECDA13A12A41A4A400FC5B31 /* Sources */,
 				ECDA13A22A41A4A400FC5B31 /* Frameworks */,
@@ -347,7 +347,7 @@
 			);
 			dependencies = (
 			);
-			name = reCollect_organized;
+			name = reCollect;
 			packageProductDependencies = (
 				EC08D3032A5591730061F570 /* FirebaseAnalytics */,
 				EC08D3052A5591730061F570 /* FirebaseAnalyticsSwift */,
@@ -362,7 +362,7 @@
 				ECEA84F92AAA3C9B006688D6 /* FirebaseFirestoreSwift */,
 			);
 			productName = reCollect_organized;
-			productReference = ECDA13A52A41A4A400FC5B31 /* reCollect_organized.app */;
+			productReference = ECDA13A52A41A4A400FC5B31 /* reCollect.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -380,7 +380,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ECDA13A02A41A4A400FC5B31 /* Build configuration list for PBXProject "reCollect_organized" */;
+			buildConfigurationList = ECDA13A02A41A4A400FC5B31 /* Build configuration list for PBXProject "reCollect" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -398,7 +398,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ECDA13A42A41A4A400FC5B31 /* reCollect_organized */,
+				ECDA13A42A41A4A400FC5B31 /* reCollect */,
 			);
 		};
 /* End PBXProject section */
@@ -614,10 +614,11 @@
 				CODE_SIGN_ENTITLEMENTS = reCollect_organized/reCollect_organized.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = CLK6D35PR4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = reCollect_organized/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = reCollect;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please let us access your visual memory base :)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -650,10 +651,11 @@
 				CODE_SIGN_ENTITLEMENTS = reCollect_organized/reCollect_organized.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = CLK6D35PR4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = reCollect_organized/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = reCollect;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please let us access your visual memory base :)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -681,7 +683,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ECDA13A02A41A4A400FC5B31 /* Build configuration list for PBXProject "reCollect_organized" */ = {
+		ECDA13A02A41A4A400FC5B31 /* Build configuration list for PBXProject "reCollect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECDA13B72A41A4AC00FC5B31 /* Debug */,
@@ -690,7 +692,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ECDA13B92A41A4AC00FC5B31 /* Build configuration list for PBXNativeTarget "reCollect_organized" */ = {
+		ECDA13B92A41A4AC00FC5B31 /* Build configuration list for PBXNativeTarget "reCollect" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECDA13BA2A41A4AC00FC5B31 /* Debug */,

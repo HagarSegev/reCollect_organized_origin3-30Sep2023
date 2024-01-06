@@ -8,6 +8,7 @@
 import UIKit
 class FramedMemory: UIView {
     weak public var chooseVC: ChooseVC!
+    public var framedMemoryBehavior: FramedMemoryBehavior!
     public let imageView: UIImageView
     public let outerFrame: UIView
     public let whiteFrame: UIView
@@ -56,8 +57,10 @@ class FramedMemory: UIView {
 
     
     private var padding: CGFloat = 10.0
-    private var bottomPadding: CGFloat  = TopBarManager.shared.topBar.frame.height + 10.0
-    private var topPadding: CGFloat  = TopBarManager.shared.topBar.frame.height*1.5 + 10.0
+    private var bottomPadding: CGFloat  = TopBarManager.shared.topBar.frame.height + 20.0 //withount the xv buttons
+    //private var bottomPadding: CGFloat  = TopBarManager.shared.topBar.frame.height + 70.0
+    private var topPadding: CGFloat  = TopBarManager.shared.topBar.frame.height*1.5 + 30.0
+    //private var topPadding: CGFloat  = TopBarManager.shared.topBar.frame.height*1.5 + 10.0 withount the instructions
 
     init(image: UIImage, localIdentifier: String, chooseVC: ChooseVC) {
         self.chooseVC = chooseVC
@@ -106,10 +109,11 @@ class FramedMemory: UIView {
         self.addGestureRecognizer(panGestureRecognizer)
         
         //specify counting label
-        countLabel.text = "\(chooseVC.selectedPhotosCount) / 50"
+        countLabel.text = "\(chooseVC.selectedPhotosCount) / 70"
         countLabel.textAlignment = .center
         countLabel.font = UIFont.systemFont(ofSize: self.chooseVC.view.frame.width/15, weight: .bold)
         countLabel.translatesAutoresizingMaskIntoConstraints = false
+
 
 
 
@@ -340,6 +344,8 @@ class FramedMemory: UIView {
         drawLine(from: CGPoint(x: outerFrame.frame.origin.x, y: outerFrame.frame.maxY), to: CGPoint(x: whiteFrame.frame.origin.x, y: whiteFrame.frame.maxY), lineWidth: 1)
         drawLine(from: CGPoint(x: outerFrame.frame.maxX, y: outerFrame.frame.maxY), to: CGPoint(x: whiteFrame.frame.maxX, y: whiteFrame.frame.maxY), lineWidth: 1)
     }
+    
+    
 
     
     func drawLine(from start: CGPoint, to end: CGPoint, lineWidth: CGFloat) {
@@ -436,7 +442,9 @@ class FramedMemory: UIView {
         for layer in lineLayers {
             layer.removeFromSuperlayer()
         }
+        countLabel.removeFromSuperview()
         lineLayers.removeAll()
+        
 
         // Deactivate constraints
         NSLayoutConstraint.deactivate(selfConstraints)
@@ -456,15 +464,83 @@ class FramedMemory: UIView {
         whiteFrameFrame.removeFromSuperview()
         innerFrame.removeFromSuperview()
         imageView.image = nil
+
+        
         
         // Remove additional pointers:
         self.localIdentifier = nil
         self.startTime = nil
         
+
+        
     }
+    
     
     deinit {
         print("\(self) is being deallocated")
     }
+    
+    
+    func tapRightBehavior() {
+        if !self.objectAttached {
+            return
+        }
+        
+        self.chooseVC.increaseCount()
+        self.objectAttached = false
+        self.objedtInRightSpin = true
+        addGradientandBlur()
+        gradient.opacity = 0
+        guard let startTime = self.startTime else {
+            // Handle the case when startTime is nil
+            return
+        }
+        
+        let endTime = Date()
+        let responseTime = endTime.timeIntervalSince(startTime)
+        
+        DataSet.shared.addApprovedPhotoData(photoLocation: self.localIdentifier, significanceValue: 1, image: self.imageView.image!)
+        
+        FirebaseManager.shared.uploadPhoto(localIdentifier: self.localIdentifier, significanceRating: 1, image: self.imageView.image!, timeInterval: responseTime) { error in
+            if let error = error {
+                print("Failed to upload photo: \(error.localizedDescription)")
+            } else {
+                print("Photo uploaded successfully!")
+            }
+        }
+        
+        DataSet.shared.shownPhotos.append(self.localIdentifier)
+        UIView.animate(withDuration: 0.5) {
+            self.gradient.opacity = 0.6
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5 ) {
+            UIView.transition(with: self.imageView, duration: 1.0, options: .transitionCrossDissolve, animations: {
+                self.updateImage()
+            }, completion: nil)
+
+        }
+    }
+
+    func tapLeftBehavior() {
+        if !self.objectAttached {
+            return
+        }
+        
+        self.objectAttached = false
+        DataSet.shared.shownPhotos.append(self.localIdentifier)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            UIView.transition(with: self.imageView, duration: 1.0 , options: .transitionCrossDissolve, animations: {
+                self.updateImage()
+            }, completion: nil)
+        }
+    }
+    
+
+ 
+
+    // Function to handle left swipe behavior with animation
+
     
 }

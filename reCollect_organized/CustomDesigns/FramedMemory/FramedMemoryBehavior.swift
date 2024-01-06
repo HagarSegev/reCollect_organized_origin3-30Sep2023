@@ -28,6 +28,8 @@ class FramedMemoryBehavior: UIDynamicBehavior {
 
 extension FramedMemory {
     
+
+    
     func updateGradientOpacityAndBlurAlpha() {
         guard let superView = self.superview else { return }
         
@@ -98,14 +100,18 @@ extension FramedMemory {
             }
         }
         DataSet.shared.shownPhotos.append(self.localIdentifier)
-        animator.removeBehavior(attachment2)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.animator.removeBehavior(self.attachment1)
-            self.gravity.gravityDirection = CGVector(dx: 0, dy: -1)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                self.updateImage()
+            animator.removeBehavior(attachment2)
+            
+            // Combine animations with removal behaviors and image update
+            UIView.animate(withDuration: 0.3, animations: {
+                self.alpha = 0
+            }) { _ in
+                self.animator.removeBehavior(self.attachment1)
+                self.gravity.gravityDirection = CGVector(dx: 0, dy: -1)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    self.updateImage()
+                }
             }
-        }
 
         
 //        self.dynamicItemBehavior.addAngularVelocity(-20, for: self)
@@ -119,6 +125,7 @@ extension FramedMemory {
 //                self.updateImage()
 //            }
 //        }
+        
     }
     
     func swipeLeftBehavior(){
@@ -130,10 +137,13 @@ extension FramedMemory {
         animator.removeBehavior(attachment1)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.animator.removeBehavior(self.attachment2)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 self.updateImage()
             }
         }
+
+        
+        
     }
     
 //    func updateImage() {
@@ -233,7 +243,7 @@ extension FramedMemory {
     func addNextButton(){
         let count = DataSet.shared.numberOfApprovedPhotos()
         print("Number of approved photos: \(count)") // Log the count for debugging
-        let enoughPhotos = count == 5
+        let enoughPhotos = count == 70
         
         if enoughPhotos {
             if ((self.behavior) != nil){
@@ -249,4 +259,7 @@ extension FramedMemory {
         let elapsedTime = endTime.timeIntervalSince(start)
         return elapsedTime
     }
+    
+    
+
 }

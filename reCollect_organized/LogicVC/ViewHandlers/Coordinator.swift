@@ -8,7 +8,7 @@
 import UIKit
 
 class Coordinator: ViewControllerHandlerDelegate {
-    private var currentHandler: ViewControllerHandler?
+    internal var currentHandler: ViewControllerHandler?
     
     func transitionTo(handler: ViewControllerHandler) {
         currentHandler?.teardownView()
@@ -24,6 +24,7 @@ class Coordinator: ViewControllerHandlerDelegate {
         currentHandler?.executeLogic()
         print("Executed logic of new handler")
     }
+    
     
 
     func handler(_ handler: ViewControllerHandler, didFinishWithTransitionTo nextHandlerType: ViewControllerHandler.Type) {
@@ -69,3 +70,5 @@ class Coordinator: ViewControllerHandlerDelegate {
     //    }
     //
 }
+
+

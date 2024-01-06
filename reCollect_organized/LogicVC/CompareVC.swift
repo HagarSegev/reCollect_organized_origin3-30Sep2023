@@ -13,7 +13,8 @@ class CompareVC: ViewControllerHandler {
     weak var delegate: ViewControllerHandlerDelegate?
 
     let view: UIView
-    
+    let screenWidth: CGFloat = UIScreen.main.bounds.width
+    private var shuffledDomains: [Domain] = []
     private var domains: [Domain] = [.recency, .frequency, .significance1, .significance2, .significance3, .significance4, .selfrelevance, .emotional, .aesthetics, .vividness]
     
     private var currentDomainIndex: Int = 0
@@ -22,6 +23,7 @@ class CompareVC: ViewControllerHandler {
     private var startTime: Date?
     private var elapsedTime: TimeInterval = 0
     var responseTime: TimeInterval?
+    
 
 
     private let explainCardButton: UIButton = UIButton(type: .custom)
@@ -38,24 +40,32 @@ class CompareVC: ViewControllerHandler {
     var randomPhotoCouples: [[String]] = []
     var indexComparison:Int = 0
     
-    
+    var cardTapped = false
     var buttonSize: CGFloat!
     let vsLabel = UILabel()
     let vsBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-    
+    let screenHeight: CGFloat = UIScreen.main.bounds.height
     var comparisonQuestion: String!
     var comparisonLabel = UILabel()
+    private let skipButton: UIButton = {
+        let button = UIButton(type: .system)
+
+        // Set additional properties and add target-action as needed
+        return button
+    }()
 
 
 
-    let comparisonsInDomain:Int = 4
+    let comparisonsInDomain:Int = 10
     
     init(view: UIView) {
         self.view = view
         setImageDims()
 //        DataSet.shared.randomImagesForDataset(numOfPhotos: 100)
+        shuffleDomainsForUser()
 
     }
+    
     
     func setupView() {
         // Setup explainCardButton
@@ -102,6 +112,7 @@ class CompareVC: ViewControllerHandler {
 //        button2.addTarget(self, action: #selector(compareButtonTapped),  for: .touchUpInside)
         button1.addTarget(self, action: #selector(compareButtonTapped(sender:)), for: .touchUpInside)
         button2.addTarget(self, action: #selector(compareButtonTapped(sender:)), for: .touchUpInside)
+        skipButton.addTarget(self, action: #selector(compareButtonTapped(sender:)), for: .touchUpInside)
 
         
         // Setup button1 and button2
@@ -132,10 +143,35 @@ class CompareVC: ViewControllerHandler {
         view.addSubview(comparisonLabel)
     }
     
+    
+    
     func teardownView() {
         explainCardButton.removeFromSuperview()
         button1.removeFromSuperview()
         button2.removeFromSuperview()
+    }
+    
+    func setFinalImage(_ image: UIImage?) {
+        let finalImageView = UIImageView()
+        finalImageView.contentMode = .scaleAspectFit
+        finalImageView.image = image
+        
+        finalImageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(finalImageView)
+        
+        // Add constraints to position the final image view
+        NSLayoutConstraint.activate([
+            finalImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            finalImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            finalImageView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -2 * padding),
+            finalImageView.heightAnchor.constraint(equalTo: view.heightAnchor, constant: -2 * padding)
+        ])
+    }
+
+    private func shuffleDomainsForUser() {
+        shuffledDomains = domains.shuffled()
+        // Use 'shuffledDomains' for the current user session
+        print("Shuffled domains for this user session: \(shuffledDomains)")
     }
     
     func executeLogic() {
@@ -155,25 +191,26 @@ class CompareVC: ViewControllerHandler {
         elapsedTime += 0.1
         // You can update any UI elements here if needed
     }
-    
  
-
-
 
 
     
     private func displayCurrentDomain() {
-        guard currentDomainIndex < domains.count else {
+        guard currentDomainIndex < shuffledDomains.count else {
             // Handle end of domains if needed
             return
         }
+
         fillRandomPhotoCouples()
-        let currentDomain = domains[currentDomainIndex]
+        let currentDomain = shuffledDomains[currentDomainIndex]
         let image = UIImage(named: currentDomain.svgFileName)
         comparisonQuestion = currentDomain.caption
         explainCardButton.setImage(image, for: .normal)
         UIView.animate(withDuration: 0.5, animations: { [self] in
             explainCardButton.alpha = 1.0
+            skipButton.alpha = 0.0 // Hide skipButton
+            comparisonLabel.alpha = 0.0 // Hide comparisonLabel
+            vsBlurView.alpha = 0
         }) { [self] _ in
             explainCardButton.isUserInteractionEnabled = true
             
@@ -195,8 +232,10 @@ class CompareVC: ViewControllerHandler {
             }){_ in
                 self.setNewComp()
                 self.setQuestionLabel()
-                self.setBlurrEffects()
+                //self.setBlurrEffects()
                 self.animateQuestionLabel()
+                self.cardTapped = true
+                
             }
         }
     }
@@ -209,9 +248,31 @@ class CompareVC: ViewControllerHandler {
         
         // Calculate the elapsed time
         let responseTime = Date().timeIntervalSince(startTime!)
-
         
-        if sender === button1 {
+        if let significance1 = DataSet.shared.approvedPhotosData[randomPhotoCouples[indexComparison][0]]?.significanceValue,
+            let significance2 = DataSet.shared.approvedPhotosData[randomPhotoCouples[indexComparison][1]]?.significanceValue {
+            print("Comparing images with significance levels: \(significance1) against \(significance2)")
+        }
+        if sender === skipButton {
+            if indexComparison < randomPhotoCouples.count {
+                let skippedPair = randomPhotoCouples[indexComparison]
+                FirebaseManager.shared.savePhotoComparison(domain: domains[currentDomainIndex], more: skippedPair[0], less: skippedPair[1], responseTime: responseTime, isSkipped: true)
+                fillRandomPhotoCouples(excludePair: skippedPair)
+            }
+            setNewComp()
+            return
+        }
+            
+        /*if sender === skipButton {
+            if indexComparison < randomPhotoCouples.count {
+                let skippedPair = randomPhotoCouples[indexComparison]
+                fillRandomPhotoCouples(excludePair: skippedPair)
+            }
+            setNewComp()
+            return
+
+        }*/
+        else if sender === button1 {
             FirebaseManager.shared.savePhotoComparison(domain: domains[currentDomainIndex], more: randomPhotoCouples[indexComparison][0], less: randomPhotoCouples[indexComparison][1], responseTime: responseTime)
         }
         else if sender === button2 {
@@ -229,6 +290,8 @@ class CompareVC: ViewControllerHandler {
             button1.alpha = 0
             button2.alpha = 0
             vsLabel.alpha = 0
+            
+            
         }){ [self]_ in
             if indexComparison < (comparisonsInDomain-1){
                 indexComparison += 1
@@ -249,23 +312,23 @@ class CompareVC: ViewControllerHandler {
     }
     
     private func setNewComp(){
-        // Start the timer for the new comparison
 
         setNewimages()
+  
         // Set button frame for button1 - before animation
         let button1Xoffset = (UIScreen.main.bounds.width - buttonSize) / 2 - 100 // Centered on x-axis
-        let button1Y = (UIScreen.main.bounds.height / 2) - buttonSize - padding // Spacing above the center
+        let button1Y = (UIScreen.main.bounds.height / 2) - buttonSize +  (0.5 * padding) // Spacing above the center
         button1.frame = CGRect(x: button1Xoffset, y: button1Y, width: buttonSize, height: buttonSize)
         
         // Set button frame for button2
         let button2Xoffset = (UIScreen.main.bounds.width - buttonSize) / 2 + 100 // Centered on x-axis
-        let button2Y = UIScreen.main.bounds.height / 2 + padding // Spacing below the center
+        let button2Y = UIScreen.main.bounds.height / 2 + ( 2.5 * padding) // Spacing below the center
         button2.frame = CGRect(x: button2Xoffset, y: button2Y, width: buttonSize, height: buttonSize)
         
         // Position the label at the center of the screen
         let centerX = UIScreen.main.bounds.width / 2
         let centerY = UIScreen.main.bounds.height / 2
-        vsLabel.center = CGPoint(x: centerX, y: centerY)
+        vsLabel.center = CGPoint(x: centerX, y: (button1.frame.maxY + button2.frame.minY) / 2)
         
             
         let button1X = (UIScreen.main.bounds.width - buttonSize) / 2
@@ -277,6 +340,8 @@ class CompareVC: ViewControllerHandler {
             button2.alpha = 1
 //            vsBlurView.alpha = 1
             vsLabel.alpha = 1
+            skipButton.alpha = 1.0 // Show skipButton
+            comparisonLabel.alpha = 1.0 // Show comparisonLabel
         }){_ in
             self.button1.isUserInteractionEnabled = true
             self.button2.isUserInteractionEnabled = true
@@ -288,10 +353,88 @@ class CompareVC: ViewControllerHandler {
         }
     }
     
+
     private func completeCompareTask() {
-        // Fade out button1 and button2
-        // Update currentDomainIndex and display the next domain's explainCardButton
+        // Fade out button1 and button2 if needed
+        UIView.animate(withDuration: 0.5, animations: {
+            self.button1.alpha = 0
+            self.button2.alpha = 0
+            self.comparisonLabel.alpha = 0
+            self.skipButton.alpha = 0
+            self.vsBlurView.alpha = 0
+        }) { [weak self] _ in
+            guard let self = self else { return }
+
+            // Handle the completion of all domains
+            if self.currentDomainIndex == self.shuffledDomains.count - 1 {
+                // Add the final image in the center of the screen
+                let finalImage = UIImage(named: "final") // Replace "finalImage" with your image name
+                self.setFinalImage(finalImage)
+                let finalImageViewBottomY = (self.view.center.y + 100)
+
+                
+            // Create two separate labels for two lines of text
+            let linkLabel1 = UILabel()
+            linkLabel1.textAlignment = .center
+            linkLabel1.numberOfLines = 0
+            linkLabel1.textColor = .blue
+            linkLabel1.isUserInteractionEnabled = true
+            let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(openFirstLink))
+            linkLabel1.addGestureRecognizer(tapGesture1)
+            
+            let linkLabel2 = UILabel()
+            linkLabel2.textAlignment = .center
+            linkLabel2.numberOfLines = 0
+            linkLabel2.textColor = .blue
+            linkLabel2.isUserInteractionEnabled = true
+            let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(openSecondLink))
+            linkLabel2.addGestureRecognizer(tapGesture2)
+            
+            // Set the text for both labels with attributed strings
+            let attributedText1 = NSMutableAttributedString()
+            attributedText1.append(NSAttributedString(string: "Link to TIPI questionnaire\n", attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]))
+            linkLabel1.attributedText = attributedText1
+    
+            let attributedText2 = NSMutableAttributedString()
+            attributedText2.append(NSAttributedString(string: "Link to User Experience feedback", attributes: [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]))
+            linkLabel2.attributedText = attributedText2
+            
+            linkLabel1.attributedText = attributedText1
+            linkLabel2.attributedText = attributedText2
+            
+            // Set frame and position for both labels
+            let labelHeight: CGFloat = 30 // Height of each label
+            linkLabel1.frame = CGRect(x: 0, y: finalImageViewBottomY + (padding*6) , width: self.view.bounds.width, height: labelHeight)
+            linkLabel2.frame = CGRect(x: 0, y: linkLabel1.frame.maxY, width: self.view.bounds.width, height: labelHeight)
+            
+            // Add both labels to the view
+            self.view.addSubview(linkLabel1)
+            //self.view.addSubview(linkLabel2)
+        } else {
+            // Increment to the next domain and display its explainCardButton
+            self.currentDomainIndex += 1
+            self.displayCurrentDomain()
+            }
+        }
+
     }
+    
+    @objc private func openFirstLink() {
+        // Open the first link
+        if let url = URL(string: "https://forms.gle/b8gB9YVPJfQa9n8L6") {
+            UIApplication.shared.open(url)
+        }
+    }
+
+    @objc private func openSecondLink() {
+        // Open the second link
+        if let url = URL(string: "https://forms.gle/15ibvPFRDxgX6ZQu6") {
+            UIApplication.shared.open(url)
+        }
+    }
+
+
+
     
     private func startTimer() {
         startTime = Date()
@@ -321,9 +464,16 @@ class CompareVC: ViewControllerHandler {
         vsLabel.text = "Vs."
         vsLabel.textAlignment = .center
 //        vsLabel.frame = vsBlurView.bounds  // Make the label fill the blur view
-        vsLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold) // may be adjusted to different phones
+        vsLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular) // may be adjusted to different phones
         vsLabel.sizeToFit()
         vsLabel.alpha = 0
+
+
+        // Set vsLabel's center y-coordinate
+        let vsLabelY = (button1.frame.maxY + button2.frame.minY) / 2 + (padding*4.5)
+
+        // Set vsLabel's center
+        vsLabel.center = CGPoint(x: view.bounds.midX, y: (button1.frame.maxY + button2.frame.minY) / 2)
     }
     
 //    private func setQuestionLabel(){
@@ -340,7 +490,7 @@ class CompareVC: ViewControllerHandler {
 //    }
     
     private func adjustFontSizeToFit(label: UILabel, frame: CGRect) {
-        guard let text = label.text else { return }
+        /*guard let text = label.text else { return }
         
         let font = label.font
         var fontSize = font?.pointSize
@@ -356,29 +506,91 @@ class CompareVC: ViewControllerHandler {
         }
         
         label.font = font!.withSize(fontSize!)
-    }
+    }*/
+        guard let text = label.text else { return }
+            
+            let font = UIFont.systemFont(ofSize: 16) // Set the font size to 16
+            
+            // Set the label's font to the calculated font size
+            label.font = font
+            
+            // Set label properties for word wrapping and line break mode
+            label.numberOfLines = 0
+            label.lineBreakMode = .byWordWrapping
+            
+            // Calculate the size of the text with the new font
+            let maxSize = CGSize(width: frame.width, height: CGFloat.greatestFiniteMagnitude)
+            let textRect = text.boundingRect(
+                with: maxSize,
+                options: [.usesLineFragmentOrigin, .usesFontLeading],
+                attributes: [NSAttributedString.Key.font: font],
+                context: nil
+            )
+            
+            // Check if the text exceeds the frame's bounds
+            if textRect.size.height > frame.height {
+                label.frame.size.height = textRect.size.height // Adjust label's height to fit text
+            }
+        }
 
     private func setQuestionLabel() {
         comparisonLabel.text = comparisonQuestion
-        comparisonLabel.textAlignment = .left
+        comparisonLabel.textAlignment = .center
         comparisonLabel.numberOfLines = 0
         comparisonLabel.lineBreakMode = .byWordWrapping
         let desiredFrame = CGRect(
+            x: screenWidth/2,
+            y: button1.frame.minY - padding*2.5,
+            width: button2.frame.width+20, // Adjust the width
+            height:   padding * 2.5
+            
+           )
+         /*let desiredFrame = CGRect(
             x: button2.frame.minX,
             y: button2.frame.maxY + padding*2,
             width: button2.frame.width,
             height: view.frame.maxY - button2.frame.maxY - padding*4
-        )
-        comparisonLabel.frame = desiredFrame
-        comparisonLabel.font = UIFont.systemFont(ofSize: 40, weight: .bold)
+            )   */
+        
+        comparisonLabel.frame = desiredFrame;
+        comparisonLabel.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         comparisonLabel.alpha = 0
         
         adjustFontSizeToFit(label: comparisonLabel, frame: desiredFrame)
+        
+
+        skipButton.setTitle("Skip", for: .normal)
+        skipButton.backgroundColor = .black
+        skipButton.setTitleColor(.white, for: .normal)
+        skipButton.layer.cornerRadius = 10
+        skipButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        skipButton.sizeToFit()
+        
+        skipButton.frame = CGRect(
+            x: view.frame.width - skipButton.frame.width - 70, // Align to the right
+            y: screenHeight - (screenHeight - button2.frame.maxY)/2,
+            width: skipButton.frame.width + 50,
+            height: skipButton.frame.height+10
+            )
+        let centerY = screenHeight - (screenHeight - button2.frame.maxY) / 2
+
+        // Update the centerY of skipButton while maintaining the x position
+        skipButton.center = CGPoint(x: skipButton.center.x, y: centerY)
+
+            
+
+        view.addSubview(skipButton)
     }
 
 
 
-    
+    private func setNewCompAndRemovePair() {
+        randomPhotoCouples.remove(at: indexComparison)
+        setNewComp()
+        }
+            
+     
+
     private func animateQuestionLabel(){
 //        let centerX = UIScreen.main.bounds.width / 2
 //        let viewFrameMAxY = view.frame.maxY
@@ -438,7 +650,7 @@ class CompareVC: ViewControllerHandler {
 //        return fetchedImage
 //    }
     
-    private func fillRandomPhotoCouples() {
+    private func fillRandomPhotoCouples(excludePair: [String]? = nil) {
         randomPhotoCouples.removeAll() // Clear any existing data
         
         let allPhotoLocations = Array(DataSet.shared.approvedPhotosData.keys)
@@ -448,19 +660,36 @@ class CompareVC: ViewControllerHandler {
         
         var availablePhotoLocations = allPhotoLocations
         
-        for _ in 1...comparisonsInDomain {
-            // Ensure there are at least 2 photos left to form a couple
-            guard availablePhotoLocations.count >= 2 else { break }
+        while availablePhotoLocations.count >= 2 {
+            guard let location1 = availablePhotoLocations.randomElement() else { break }
+            availablePhotoLocations.removeAll { $0 == location1 }
             
-            let randomIndices = pickTwoRandomIndices(from: availablePhotoLocations.count)
+            guard let location2 = availablePhotoLocations.randomElement() else { break }
+            availablePhotoLocations.removeAll { $0 == location2 }
             
-            let couple = [availablePhotoLocations[randomIndices.0], availablePhotoLocations[randomIndices.1]]
-            randomPhotoCouples.append(couple)
+            // Check if the pair is to be excluded
+            if let excluded = excludePair, excluded.contains(location1) && excluded.contains(location2) {
+                continue // Skip adding the excluded pair
+            }
             
-            // Remove the selected photos so they aren't picked again
-            availablePhotoLocations.remove(at: randomIndices.1) // Remove the larger index first to avoid index out of range
-            availablePhotoLocations.remove(at: randomIndices.0)
+            if isValidPair(location1, location2) {
+                let couple = [location1, location2]
+                randomPhotoCouples.append(couple)
+            }
         }
+    }
+
+    
+    private func isValidPair(_ location1: String, _ location2: String) -> Bool {
+        guard let photoData1 = DataSet.shared.approvedPhotosData[location1],
+              let photoData2 = DataSet.shared.approvedPhotosData[location2] else {
+            return false
+        }
+        
+        let significance1 = photoData1.significanceValue
+        let significance2 = photoData2.significanceValue
+        
+        return !(significance1 == 1 && significance2 == 4) && !(significance1 == 4 && significance2 == 1)
     }
     
     private func pickTwoRandomIndices(from size: Int) -> (Int, Int) {

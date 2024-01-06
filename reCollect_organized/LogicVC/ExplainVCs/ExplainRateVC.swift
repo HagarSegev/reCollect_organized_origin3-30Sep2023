@@ -16,9 +16,10 @@ class ExplainRateVC: ExplainVC {
     override func textForState(_ state: State) -> String {
         switch state {
         case .stage0: return ""
-        case .stage1: return "In this stage you will defy the significance of your photos.\nYou can choose the significance of a single memory on a scale between 1 (least significant) to 4 (most significant). "
-        case .stage2: return "All photos are initialized to significance value 1.\nBy tapping a memory you will increase the significance rating of it by 1, and the image will increase in size accordingly. "
-        case .stage3: return "How personally significant is this photo?\n\n Tap on the it! "
+        case .stage1: return "In this stage, all photos you just chose will be displayed and you'll defy how each photo is significant for you."
+        case .stage2: return "Choose the significance of a photo on a scale between 1 (least significant) to 4 (most significant. When you tap a photo, its significance level increases, and it becomes larger.\n "
+        case .stage3:return
+            "All photos start at a significance level 1. It's important to go over all the photos thoroughly. how personally significant is this photo?\n\n Tap on it!"
         case .finished: return ""
         }
     }

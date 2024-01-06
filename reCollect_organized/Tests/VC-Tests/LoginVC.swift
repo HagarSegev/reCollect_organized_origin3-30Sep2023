@@ -42,8 +42,8 @@ class LoginVC: ViewControllerHandler {
         self.viewController = viewController
         self.googleButton = CustomSignInButton(title: "Sign in with Google", logoName: "googleLogoSVG")
         self.appleButton = CustomSignInButton(title: "Sign in with Apple", logoName: "appleLogoSVG")
-        self.facebookButton = CustomSignInButton(title: "Sign in with Facebook", logoName: "facebookLogoSVG")
-        self.phoneButton = CustomSignInButton(title: "Sign in with Phone", logoName: "phoneLogoSVG")
+        self.facebookButton = CustomSignInButton(title: "Sign in with Facebook (soon)", logoName: "facebookLogoSVG")
+        self.phoneButton = CustomSignInButton(title: "Sign in with Phone (soon)", logoName: "phoneLogoSVG")
         
         // Initialize and configure the welcome label
         welcomeLabel = UILabel()

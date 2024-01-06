@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     private var scrollView: BackgroundScrollView!
     var coordinator: Coordinator!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,19 +20,33 @@ class ViewController: UIViewController {
 //        let backgroundImage = UIImage(named: "BackgroundImg")
 //        background = Background(image: backgroundImage!)
 
+
+
         // Set up the background image view
         let backgroundImageView = Background.shared.imageView
+        // Apply blur effect with fade transition after a delay of 7.5 seconds
+
+        //applyBlurEffect()
+        
+        // Apply the blur effect to the background
         backgroundImageView.frame = view.bounds
         backgroundImageView.contentMode = .scaleAspectFill
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7.3) { [weak self] in
+            guard let self = self else { return }
+            self.applyBlurEffect()
 
+        }
+
+
+
+        
         // Add the background image view to the view hierarchy
         view.addSubview(backgroundImageView)
         view.sendSubviewToBack(backgroundImageView)
         
-        let topBarManager = TopBarManager.shared
-        
-        // Add the top bar to the view hierarchy
-        topBarManager.addToView(view)
+        //NOTICE for now the topbar is added thoruh the blur effect
+        //let topBarManager = TopBarManager.shared
+        //topBarManager.addToView(self.view)
 
         // Set up the coordinator
         coordinator = Coordinator()
@@ -40,6 +55,13 @@ class ViewController: UIViewController {
 
         // Transition to StartVC
         coordinator.transitionTo(handler: StartVC(view: view, viewController: self))
+        // Schedule the application of blur effect after a delay of 10 seconds
+        // Set up the top bar manager
+        
+
+        }
+
+        
 //        // TODO: delete - * Change the VC hanler to generate it first
 //        topBarManager.extendBar()
 //        coordinator.transitionTo(handler: ChooseVC(view: view))
@@ -69,6 +91,17 @@ class ViewController: UIViewController {
 //        // Add the desired effect (Effect1)
 //        let effect = Effect2()
 //        background?.addEffect(to: scrollView, effect: effect)
-    }
     
+    func applyBlurEffect() {
+        
+        let blurEffect = UIBlurEffect(style: .light)
+
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        view.addSubview(blurEffectView)
+        let topBarManager = TopBarManager.shared
+        topBarManager.addToView(self.view)
+
+
+    }
 }

@@ -26,7 +26,7 @@ class LogoAndTagline: UIView {
         taglineLabel = UILabel()
         taglineLabel.textColor = UIColor.black
         taglineLabel.font = UIFont.systemFont(ofSize: 16 * (UIScreen.main.bounds.width / 390))
-        taglineLabel.attributedText = NSMutableAttributedString(string: "Explore Life's core Moments", attributes: [NSAttributedString.Key.kern: -0.32])
+        taglineLabel.attributedText = NSMutableAttributedString(string: "Explore Life's Core Moments", attributes: [NSAttributedString.Key.kern: -0.32])
         self.addSubview(taglineLabel)
         taglineLabel.translatesAutoresizingMaskIntoConstraints = false
 

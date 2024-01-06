@@ -37,16 +37,16 @@ enum Domain: String {
     
     var caption: String {
         switch self {
-        case .recency: return "   Which event happened more recently  "
-        case .frequency: return "   Which experience do you think about more often?  "
-        case .significance1: return "   Which photo is more significant?  "
-        case .significance2: return "   Which event is more significant?  "
-        case .significance3: return "   Which place is more significant?  "
-        case .significance4: return "   Which person is more significant?  "
+        case .recency: return "Which event happened more recently?"
+        case .frequency: return "Which experience do you think about more often?"
+        case .significance1: return "Which photo is more significant?"
+        case .significance2: return "Which event is more significant?"
+        case .significance3: return "Which place is more significant?"
+        case .significance4: return "Which person is more significant?"
         case .selfrelevance: return " Which event is more personally relevant for you? "
-        case .emotional: return "   Which event was more emotional?  "
-        case .aesthetics: return "   Which photo is more aethetic?  "
-        case .vividness: return "   Which event do you remember more vividly?  "
+        case .emotional: return "Which photo evokes stronger emotions?"
+        case .aesthetics: return "Which photo is more aesthetic?"
+        case .vividness: return "Which event do you remember more vividly?"
         }
     }
 }

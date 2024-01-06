@@ -119,7 +119,7 @@ class FirebaseManager {
         }
     }
     
-    func savePhotoComparison(domain: Domain, more: String, less: String,  responseTime: TimeInterval) {
+    func savePhotoComparison(domain: Domain, more: String, less: String,  responseTime: TimeInterval, isSkipped: Bool = false) {
             
         // Ensure the user is authenticated
         guard let userId = Auth.auth().currentUser?.uid else {
@@ -133,15 +133,42 @@ class FirebaseManager {
         
         // Convert TimeInterval to NSNumber
         let responseTimeNumber = NSNumber(value: responseTime)
-        let totalTimeNumber = NSNumber(value: totalTime)
+
         
         // Structure the data
-        let comparisonData: [String: Any] = [
+        var comparisonData: [String: Any] = [
             "more": sanitizedMore,
             "less": sanitizedLess,
             "responseTime": responseTimeNumber,
-            "totalTime": totalTimeNumber
+            
         ]
+        
+        if isSkipped {
+                comparisonData["status"] = "Skipped" // Mark as skipped
+                comparisonData["equal1"] = sanitizedMore // Indicate equal images (1)
+                comparisonData["equal2"] = sanitizedLess // Indicate equal images (2)
+
+                // Update skip count for the domain in Firestore
+                let domainRef = firestore.collection("users").document(userId).collection("compairs").document(domain.rawValue)
+
+                // Get the current count and increment it by 1
+                domainRef.getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        if var skipCount = document.data()?["skips"] as? Int {
+                            skipCount += 1
+                            domainRef.updateData(["skips": skipCount])
+                        } else {
+                            // If the skip count doesn't exist yet, set it to 1
+                            domainRef.setData(["skips": 1], merge: true)
+                        }
+                    } else {
+                        print("Document does not exist")
+                    }
+                }
+            }
+
+
+        
         
         // Set the Firestore reference
         let docRef = firestore.collection("users").document(userId).collection("compairs").document(domain.rawValue)

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AEF6E11D-A8C5-4DE3-ACE6-8BD470E8B2D9"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFC0B167-F14C-4C1F-852F-3C228D78C4B7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/LogicVC/ExplainVCs/ExplainVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "setupView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BFC0B167-F14C-4C1F-852F-3C228D78C4B7 - fe4e9a927086d6b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ExplainVC.setupView() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/LogicVC/ExplainVCs/ExplainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "4880">
+               </Location>
+               <Location
+                  uuid = "BFC0B167-F14C-4C1F-852F-3C228D78C4B7 - fe4e9a927086d6b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.ExplainVC.setupView() -&gt; ()"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/LogicVC/ExplainVCs/ExplainVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "4876">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/Background/Background.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "shared"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - c38e89891ca2fdb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Background.curScale.getter : CoreGraphics.CGFloat"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/Background/Background.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - a2b0cd52fa295430"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Background.curScale.setter : CoreGraphics.CGFloat"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/Background/Background.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - 9919d1a8bdde6e03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Background.curScale.modify : CoreGraphics.CGFloat"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/Background/Background.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - 6e9c53a3a83b6958"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Background.curScale.modify : CoreGraphics.CGFloat with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - 6077100b4aa73677"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Background.init(image: __C.UIImage) -&gt; reCollect_organized.Background"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/Background/Background.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - 90c7d3502f5d33bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for shared"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/Background/Background.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - 5c708470f486a35c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; reCollect_organized.Background in variable initialization expression of static reCollect_organized.Background.shared : reCollect_organized.Background"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/Background/Background.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - f9dc8169ed68471e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect_organized.Background.shared.unsafeMutableAddressor : reCollect_organized.Background"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/Background/Background.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "3563E96D-1E8C-4CAC-BE5F-C6654C307189 - 461a7a5905b627c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static reCollect_organized.Background.shared.getter : reCollect_organized.Background"
+                  moduleName = "reCollect_organized"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/Background/Background.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "067E9906-E7B3-4FAB-A7F1-A2EFC3D392B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reCollect_organized/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "applyBlurEffect()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "067E9906-E7B3-4FAB-A7F1-A2EFC3D392B9 - f7f4cf4e6c660c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect.ViewController.applyBlurEffect() -&gt; ()"
+                  moduleName = "reCollect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "067E9906-E7B3-4FAB-A7F1-A2EFC3D392B9 - f7f4cf4e6c660e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reCollect.ViewController.applyBlurEffect() -&gt; ()"
+                  moduleName = "reCollect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hagarsgv/Downloads/reCollect_organized_origin3-30Sep2023/reCollect_organized/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

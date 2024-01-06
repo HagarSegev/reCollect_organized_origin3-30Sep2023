@@ -51,6 +51,17 @@ class ProgressMeter: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func clearLastColoredDot() {
+        guard currentStage > 0 else {
+            return // If already at the first stage, do nothing
+        }
+
+        let lastColoredIndex = currentStage - 1
+        circles[lastColoredIndex].layer.borderWidth = 2
+        circles[lastColoredIndex].backgroundColor = .clear
+    
+    }
+    
     func nextStage() {
         guard currentStage < circles.count else { return }
         var delay: CGFloat = 0

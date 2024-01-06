@@ -61,7 +61,7 @@ class RateVC: ViewControllerHandler {
         windowView.addSubview(instructionsLabel)
 
         let additionalTextLabel = UILabel(frame: CGRect(x: 0, y: instructionsLabel.frame.maxY + 8, width: windowView.frame.width, height: 20))
-        additionalTextLabel.text = "Please tap photos to increase significance lv."
+        additionalTextLabel.text = "Tap photos to increase their significance"
         additionalTextLabel.font = UIFont.systemFont(ofSize: 16)
         additionalTextLabel.textAlignment = .center
         windowView.addSubview(additionalTextLabel)
@@ -723,7 +723,7 @@ class RateVC: ViewControllerHandler {
 
         let newFrame = CGRect(x: newButtonX, y: newButtonY, width: newButtonWidth, height: newButtonHeight)
 
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.0) {
             self.nextButton.frame = newFrame
         }
 

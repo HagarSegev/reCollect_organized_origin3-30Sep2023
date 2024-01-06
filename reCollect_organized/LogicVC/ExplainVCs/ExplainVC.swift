@@ -100,6 +100,35 @@ class ExplainVC: ViewControllerHandler {
         
     }
     
+    func shouldPerformTypingAnimation() -> Bool {
+           return false  // By default, typing animation is enabled
+       }
+    
+    func setTitlesForState(_ state: State) {
+            switch state {
+            case .stage0:
+                titleLabel.text = "Title for Stage 0"
+                nextButton.setTitle("Next for Stage 0", for: .normal)
+                // Set titles for other UI elements or do additional configuration based on this state
+            case .stage1:
+                titleLabel.text = "Title for Stage 1"
+                nextButton.setTitle("Next", for: .normal)
+                // Set titles for other UI elements or do additional configuration based on this state
+            case .stage2:
+                titleLabel.text = "Title for Stage 2"
+                nextButton.setTitle("Next", for: .normal)
+                // Set titles for other UI elements or do additional configuration based on this state
+            case .stage3:
+                titleLabel.text = "Title for Stage 3"
+                nextButton.setTitle("I'm Ready!", for: .normal)
+                // Set titles for other UI elements or do additional configuration based on this state
+            case .finished:
+                titleLabel.text = "Title for Finished Stage"
+                nextButton.setTitle("", for: .normal)
+                // Set titles for other UI elements or do additional configuration based on this state
+            }
+        }
+    
     // Override these in subclasses
     func textForState(_ state: State) -> String {
         return ""
@@ -136,7 +165,6 @@ class ExplainVC: ViewControllerHandler {
             outerWindow.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding*2),
             outerWindow.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding*2),
             outerWindow.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomPadding),
-            
             innerWindow.centerXAnchor.constraint(equalTo: outerWindow.centerXAnchor),
             innerWindow.centerYAnchor.constraint(equalTo: outerWindow.centerYAnchor),
             innerWindow.widthAnchor.constraint(equalTo: outerWindow.widthAnchor, constant: -padding*2),
@@ -155,14 +183,20 @@ class ExplainVC: ViewControllerHandler {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: gifView.bottomAnchor, constant: 2*padding),
             titleLabel.leadingAnchor.constraint(equalTo: innerWindow.contentView.leadingAnchor, constant: 4*padding),
-            titleLabel.trailingAnchor.constraint(equalTo: innerWindow.contentView.trailingAnchor, constant: (-6)*padding)
+            titleLabel.trailingAnchor.constraint(equalTo: innerWindow.contentView.trailingAnchor, constant: (-6)*padding),
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2*padding),
-            label.leadingAnchor.constraint(equalTo: innerWindow.contentView.leadingAnchor, constant: 2*padding),
-            label.trailingAnchor.constraint(equalTo: innerWindow.contentView.trailingAnchor, constant: (-2)*padding)
+            label.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2 * padding),
+            label.leadingAnchor.constraint(equalTo: innerWindow.contentView.leadingAnchor, constant: 2 * padding),
+            label.trailingAnchor.constraint(equalTo: innerWindow.contentView.trailingAnchor, constant: -4 * padding), // Adjusted trailing constant
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 0.7), // 80% of superview width
+            
         ])
+
+        
         
        
         NSLayoutConstraint.activate([
@@ -178,13 +212,23 @@ class ExplainVC: ViewControllerHandler {
         NSLayoutConstraint.activate([
             //nextButton.widthAnchor.constraint(equalTo: nextButton.heightAnchor)
             nextButton.widthAnchor.constraint(equalToConstant: 120),
-            nextButton.heightAnchor.constraint(equalToConstant: 30)
+            nextButton.heightAnchor.constraint(equalToConstant:TopBarManager.shared.topBar.frame.height/2)
+
 
         ])
         
         progressMeter.centerYAnchor.constraint(equalTo: innerWindow.contentView.bottomAnchor, constant: -padding*2).isActive = true
         progressMeter.centerXAnchor.constraint(equalTo: innerWindow.centerXAnchor).isActive = true
-        
+       
+    // Add swipe gesture recognizer to innerWindow
+        innerWindow.isUserInteractionEnabled = true
+        let swipeRightGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+        swipeRightGesture.direction = .right
+        innerWindow.addGestureRecognizer(swipeRightGesture)
+
+        let swipeLeftGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+        swipeLeftGesture.direction = .left
+        innerWindow.addGestureRecognizer(swipeLeftGesture)
     }
     
     func teardownView() {
@@ -209,19 +253,48 @@ class ExplainVC: ViewControllerHandler {
         })
         state = state.nextState
         gifView.image = imageForState(state)
+        titleLabel.text = labelForStage()
         typeText(text: textForState(state)) {
             self.finishedPrinting = true
-            self.animateNextButton()
+            //self.animateNextButton()
         }
         // Hide the "next" button while the animation is playing
-        nextButton.isHidden = true
+        nextButton.isHidden = false
     }
     
+    
+    @objc func handleSwipeGesture(_ recognizer: UISwipeGestureRecognizer) {
+        if recognizer.direction == .left {
+            // Swipe left, move to the next state
+            advanceState()
+            if state == .finished {
+                // Transition to the next view controller
+                advanceToNextVC()
+            }
+        } else if recognizer.direction == .right {
+            if state != .stage1 {
+                goBackState()
+            }
+            // Swipe right, move to the previous state (if needed)
+            // Implement logic to go back to the previous state if necessary
+        }
+    }
+    
+    func goBackState() {
+        progressMeter.prevStage()
+        state = state.previousState
+        gifView.image = imageForState(state)
+        titleLabel.text = labelForStage()
+        label.text = textForState(state)
+        self.finishedPrinting = true
+        self.nextButton.isHidden = false
+        
+
+    }
     
     func executeLogic() {
         // Add your logic here
         print("Starting logic of WindowVC")
-        titleLabel.text = labelForStage()
         changeZoomToCurrentExplain()
         UIView.animate(withDuration: 1, animations: { [self] in
             innerWindow.alpha = innerFrameAlpha
@@ -263,42 +336,64 @@ class ExplainVC: ViewControllerHandler {
     }
     
     func typeText(text: String, completion: @escaping () -> Void) {
-        finishedPrinting  = false
+        finishedPrinting = false
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 0.01
+        paragraphStyle.lineSpacing = 14
         
-        label.text = "" // make sure the label starts with an empty string
-        
-        let attributedString = NSMutableAttributedString(string: text)
-        attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: text.count))
-        
-        var characterIndex = 0
-        var delay: CGFloat = 0.0
-        
-        typingTimer = Timer.scheduledTimer(withTimeInterval: Double(typingFrequency), repeats: true) { [self] timer in
-            guard characterIndex < text.count else {
-                timer.invalidate()
-                completion()
-                return
+        if shouldPerformTypingAnimation() {
+            
+
+            
+            label.text = "" // make sure the label starts with an empty string
+            
+            let attributedString = NSMutableAttributedString(string: text)
+            attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: text.count))
+            
+            var characterIndex = 0
+            var delay: CGFloat = 0.0
+            
+            typingTimer = Timer.scheduledTimer(withTimeInterval: Double(typingFrequency), repeats: true) { [self] timer in
+                guard characterIndex < text.count else {
+                    timer.invalidate()
+                    completion()
+                    return
+                }
+                
+                let character = text[text.index(text.startIndex, offsetBy: characterIndex)]
+                self.label.text?.append(character)
+                
+                if character == "," {
+                    delay = self.typingFrequency * self.speedFactor
+                } else if character == "." {
+                    delay = self.typingFrequency * (self.speedFactor * 2)
+                } else if character == "\n" {
+                    delay = self.typingFrequency * (self.speedFactor * 4)
+                } else {
+                    delay = self.typingFrequency * CGFloat(arc4random_uniform(2))  // random delay for natural typing
+                }
+                
+                timer.fireDate = Date().addingTimeInterval(Double(typingFrequency + delay))
+                characterIndex += 1
             }
+                
+        } else {
+            label.text = text
+            completion()
+            animateNextButton()
+            return
+
             
-            let character = text[text.index(text.startIndex, offsetBy: characterIndex)]
-            self.label.text?.append(character)
+
             
-            if character == "," {
-                delay = self.typingFrequency * self.speedFactor
-            } else if character == "." {
-                delay = self.typingFrequency * (self.speedFactor * 2)
-            } else if character == "\n" {
-                delay = self.typingFrequency * (self.speedFactor * 4)
-            } else {
-                delay = self.typingFrequency * CGFloat(arc4random_uniform(2))  // random delay for natural typing
-            }
-            
-            timer.fireDate = Date().addingTimeInterval(Double(typingFrequency + delay))
-            characterIndex += 1
         }
+
         
+    }
+    
+    func boldText(_ text: String) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: text)
+        attributedString.addAttributes([.font: UIFont.boldSystemFont(ofSize: 16)], range: NSRange(location: 0, length: text.count))
+        return attributedString
     }
     
     @objc func didTapInnerWindow() {
@@ -309,15 +404,18 @@ class ExplainVC: ViewControllerHandler {
         typingTimer?.invalidate()  // Stop the timer
         label.text = textForState(state)  // Set the label text to the full text for the current state
         
+        
         animateNextButton()
     }
     
     private func animateNextButton(){
         self.nextButton.alpha = 0
         self.nextButton.isHidden = false
-        UIView.animate(withDuration: 0.5, animations: {
-            self.nextButton.alpha = 1
-        })
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            UIView.animate(withDuration: 0.5) {
+                self?.nextButton.alpha = 1
+            }
+        }
     }
 }
 
@@ -338,6 +436,15 @@ enum State {
         case .stage1: return .stage2
         case .stage2: return .stage3
         case .stage3, .finished: return .finished
+        }
+    }
+    var previousState: State {
+        switch self {
+        case .stage0: return .stage0 // If you can't go further back from stage0
+        case .stage1: return .stage0
+        case .stage2: return .stage1
+        case .stage3: return .stage2
+        case .finished: return .stage3
         }
     }
 }

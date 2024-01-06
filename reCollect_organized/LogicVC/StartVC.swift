@@ -71,6 +71,7 @@ class StartVC: ViewControllerHandler {
             Background.shared.changeOpacity(to: 1, duration: 7)
             Background.shared.changeZoom(newScale: 3, duration: 8)
             TopBarManager.shared.animateOpacity(to: 1 , duration: 7)
+
         }
         
         
@@ -93,12 +94,13 @@ class StartVC: ViewControllerHandler {
             })
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
-            UIView.animate(withDuration: 2.5, animations: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+            UIView.animate(withDuration: 2.0, animations: {
                 self.byLabel.alpha = 0
                 self.logoImageView.alpha = 0
             }) { _ in
                 print("TestLogicVC1 finished, transitioning to TestLogicVC2")
+
                 self.delegate?.handler(self, didFinishWithTransitionTo: LoginVC.self)
 //                self.delegate?.handler(self, didFinishWithTransitionTo: ChooseVC.self)
             }

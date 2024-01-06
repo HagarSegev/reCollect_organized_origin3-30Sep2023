@@ -23,13 +23,13 @@ class ExplainCompareVC: ExplainVC {
     override func textForState(_ state: State) -> String {
         switch state {
         case .stage0: return ""
-        case .stage1: return "In this stage you will compare pairs of photos in different cognitive espects."
-        case .stage2: return "You will be asked with a question and pairs of photos will be displayed on the screen. "
-        case .stage3: return "For each question, tap on the right answer\n\nAre you ready? "
+        case .stage1: return "This is the main and last step. The stage consists of 10 questions, for each question 10 pairs of photos will appear."
+        case .stage2: return "For each pair of photos, tap on the photo that answers the question. For example - 'which photo is more aesthetic?'"
+        case .stage3: return "If there is no correct answe, tap the 'skip' button to display an alternative comparison. \n\nAre you ready? "
         case .finished: return ""
         }
     }
-    
+    // after level4 , tapping will restart the sig. level to 1 again
     override func imageForState(_ state: State) -> UIImage? {
         switch state {
         case .stage0: return nil

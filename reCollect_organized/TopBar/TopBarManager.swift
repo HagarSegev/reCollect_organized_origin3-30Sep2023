@@ -25,17 +25,21 @@ class TopBarManager {
         let topBarHeight = max(statusBarHeight, navigationBarHeight)
         
         let blurEffect = UIBlurEffect(style: .light)
-        topBar = UIVisualEffectView(effect: blurEffect)
+        topBar = UIVisualEffectView(effect: nil)
+        //topBar = UIView()
         topBar.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: topBarHeight)
         topBar.alpha = 0
+        print("TopBarManager - Initialized with originalHeight: \(originalHeight)")
         
         originalHeight = topBarHeight
         
     }
     
     func addToView(_ view: UIView) {
+        print("TopBarManager - Adding topBar to view")
         view.addSubview(topBar)
         view.bringSubviewToFront(topBar)
+        
     }
     
     func animateHeight(to height: CGFloat, duration: TimeInterval = 0.5) {
